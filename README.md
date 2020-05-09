@@ -1,2 +1,5 @@
-# leticiacamposs2.github.io
-Web portifólio
+# Site pessoal
+Esse repositório foi criado para ser um portfólio pessoal do meu trabalho!
+
+### Encontrou um bug?
+[Abra uma issue](https://github.com/leticiacamposs2/leticiacamposs2.github.io/issues)
