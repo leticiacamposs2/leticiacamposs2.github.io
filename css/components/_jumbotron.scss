@@ -52,7 +52,8 @@
 
   &__content {
     padding: 20px;
-    font-family: "Poppins";
+    // font-family: "Poppins";
+    font-family: Inter;
 
     @include tablet {
       order: 1;
