@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
-<body>
+<body id="home">
     <div class="sidedrawer">
         <ul>
-            <li><a href="#">inicio</a></li>
-            <li><a href="#">sobre mim</a></li>
-            <li><a href="#">projetos</a></li>
-            <li><a href="#">certificados</a></li>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">sobre mim</a></li>
+            <li><a href="#work">projetos</a></li>
+            <li><a href="#certificates">certificados</a></li>
         </ul>
     </div>
     <div class="backdrop"></div>
 
     <!-- Navbar -->
-    <header>
+    <header id="navbar">
         <div class="container">
             <nav class="navbar">
                 <div class="navbar__brand">
                     <p class="navbar__brand__logo">
-                        leticiacampos<span class="logo-dot">.dev</span>
+                        leticiacampos<span class="logo-dot">s2</span>
                     </p>
                     <div id="bars">
                         <span 
@@ -37,10 +37,10 @@
                 </div>
                 <div class="navbar__list">
                     <ul class="list__component">
-                        <li><a href="#">inicio</a></li>
-                        <li><a href="#">sobre mim</a></li>
-                        <li><a href="#">projetos</a></li>
-                        <li><a href="#">certificados</a></li>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">sobre mim</a></li>
+                        <li><a href="#work">projetos</a></li>
+                        <li><a href="#certificates">certificados</a></li>
                     </ul>
                 </div>
             </nav>
@@ -109,19 +109,19 @@
 
     <div class="container">
         <!-- About -->
-        <section>
+        <section id="about">
             <div class="about">
-                <div class="about__image">
+                <div class="about__image" data-jarallax-element="80">
                     <img src="assets/about.jpg" alt="" />
                 </div>
                 <div class="about__content">
-                    <h2>
+                    <h2 data-jarallax-element="-100">
                         Tenho 1+ ano <br />
                         Experiência em<br />
                         Desenvolvimento <br />
                         <span>de Sistemas</span>
                     </h2>
-                    <p class="content">
+                    <p class="content" data-jarallax-element="-60">
                         Formada em gestão da tecnologia da informação 
                         pela universidade cruzeiro do sul 
                         e atualmente cursando a 2° graduação
@@ -135,7 +135,9 @@
         </section>
         <!-- About -->
     
-        <section>
+
+        <!-- Work -->
+        <section id="work">
             <div class="showcase">
                 <div class="showcase__text">
                     <h2>Projetos</h2>
@@ -187,6 +189,54 @@
             </div>
         </section>
     </div>
+    <!-- Work -->
+
+    <!-- Certificates -->
+    <section id="certificates">
+        <div class="certificates">
+            <h2>Meus certificados</h2>
+    
+            <div class="courses">
+                <div class="courses__picture 0">
+                    <img src="assets/course-0.png" alt="" id="person-0" />
+                </div>
+    
+                <div class="courses__picture 1">
+                    <img src="assets/course-1.png" alt="" id="person-1" />
+                </div>
+                <div class="courses__picture 2">
+                    <img src="assets/course-2.png" alt="" id="person-2" />
+                </div>
+            </div>
+    
+            <div class="certificates__bio">
+                <p class="certificates__bio__name"></p>
+                <p class="certificates__bio__role"></p>
+            </div>
+            <div class="certificates__content">
+                <p class="certificates__content__text"></p>
+                <div class="certificates__content__stars">
+                <span
+                    class="iconify star"
+                    data-icon="entypo:star"
+                    data-inline="false">
+                </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    </div>
+    <!-- Certificates -->
+
+    <footer>
+        <a href="#" class="logo">leticiacampos<span>s2</span> </a>
+        <p>Template inspirado by @birunidev</p>
+    </footer>
+    
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax-element.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script>
 
     <script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script>
     <script src="js/script.js"></script>

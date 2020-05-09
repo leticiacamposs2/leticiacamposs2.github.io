@@ -16,11 +16,19 @@ backdrop.addEventListener("click", () => {
 const showcaseImageContainer = document.getElementById("showcase-image");
 const indicators = document.querySelectorAll(".indicator");
 console.log(indicators);
+// <img src="assets/portfolio1.png" alt="" />
 let images = [1, 2, 3, 4];
 
 window.onload = () => {
   let i = 1;
   renderImage(1);
+  // setInterval(() => {
+  //   if (i > 4) {
+  //     i = 1;
+  //   }
+  //   renderImage(i);
+  //   i++;
+  // }, 2000);
 };
 
 for (const indicator of indicators) {
@@ -42,3 +50,87 @@ function renderImage(imageNum) {
 
   showcaseImageContainer.innerHTML = `<img src="assets/portfolio${imageNum}.png" alt="" />`;
 }
+
+// showcase part
+
+// certificates part
+const persons = document.querySelectorAll(".courses__picture");
+const personName = document.querySelector(".certificates__bio__name");
+const personRole = document.querySelector(".certificates__bio__role");
+const personContent = document.querySelector(".certificates__content__text");
+const personStars = document.querySelector(".certificates__content__stars");
+
+let certificatess = [
+  {
+    id: "1",
+    name: "Alura",
+    role: "encurtador.com.br/hDKZ0",
+    content:
+      "Cursos: Javascript, Bootstrap, Jasmine (testes unitários) e React",
+    stars: 5,
+  },
+  {
+    id: "2",
+    name: "Node.js para Iniciantes - #NodeBR!",
+    role: "encurtador.com.br/hmKX7",
+    content: "Aprendi desde o básico de Javascript, ciclo de vida, manipulação de listas, testes, autenticação, autorização, documentação de serviços e gerenciamento de variáveis de ambiente (environments) de aplicações. Acesse: https://github.com/leticiacamposs2/node-js-para-iniciantes",
+    stars: 5,
+  },
+  {
+    id: "3",
+    name: "Scrum Foundation Professional Certificate (SFPC)",
+    role: "encurtador.com.br/aeENU",
+    content:
+      "Obtive o conhecimento do framework Scrum, suas principais definições e papéis",
+    stars: 5,
+  },
+];
+
+console.log(persons);
+
+for (const person of persons) {
+  person.addEventListener("click", (e) => {
+    let index = e.target.id.split("-")[1];
+    console.log(person.classList[1]);
+    renderContent(index);
+  });
+}
+
+renderContent(1);
+
+function renderContent(index) {
+  personName.innerText = `${certificatess[index].name}`;
+  personRole.innerText = `${certificatess[index].role}`;
+  personContent.innerText = `${certificatess[index].content}`;
+
+  for (const person of persons) {
+    if (index === person.classList[1]) {
+      person.classList.add("active");
+    } else {
+      person.classList.remove("active");
+    }
+  }
+
+  let starHTML = ``;
+  for (let i = 0; i < certificatess[index].stars; i++) {
+    starHTML += `<span
+    class="iconify star active"
+    data-icon="entypo:star"
+    data-inline="false"
+  ></span> `;
+  }
+  personStars.innerHTML = starHTML;
+}
+
+// certificates part
+
+// handle navbar background
+const navbar = document.getElementById("navbar");
+
+document.addEventListener("scroll", () => {
+  if (window.top.scrollY > 199) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
