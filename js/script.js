@@ -15,20 +15,12 @@ backdrop.addEventListener("click", () => {
 // showcase part
 const showcaseImageContainer = document.getElementById("showcase-image");
 const indicators = document.querySelectorAll(".indicator");
-console.log(indicators);
-// <img src="assets/portfolio1.png" alt="" />
+
 let images = [1, 2, 3, 4];
 
 window.onload = () => {
   let i = 1;
   renderImage(1);
-  // setInterval(() => {
-  //   if (i > 4) {
-  //     i = 1;
-  //   }
-  //   renderImage(i);
-  //   i++;
-  // }, 2000);
 };
 
 for (const indicator of indicators) {
@@ -84,6 +76,14 @@ let certificatess = [
       "Obtive o conhecimento do framework Scrum, suas principais definições e papéis",
     stars: 5,
   },
+  {
+    id: "4",
+    name: "React Bootcamp",
+    role: " ",
+    content:
+      "Durante este bootcamp vimos conceitos de Javascript (promisses, callbacks e async/await), Formik, React UI Framework, React Router, Jest e Redux",
+    stars: 5,
+  },
 ];
 
 console.log(persons);
@@ -101,6 +101,7 @@ renderContent(1);
 function renderContent(index) {
   personName.innerText = `${certificatess[index].name}`;
   personRole.innerText = `${certificatess[index].role}`;
+  personContent.innerText = `${certificatess[index].content}`;
   personContent.innerText = `${certificatess[index].content}`;
 
   for (const person of persons) {
