@@ -12,39 +12,6 @@ backdrop.addEventListener("click", () => {
   backdrop.classList.remove("show");
 });
 
-// showcase part
-const showcaseImageContainer = document.getElementById("showcase-image");
-const indicators = document.querySelectorAll(".indicator");
-
-let images = [1, 2, 3, 4];
-
-window.onload = () => {
-  let i = 1;
-  renderImage(1);
-};
-
-for (const indicator of indicators) {
-  indicator.addEventListener("click", (e) => {
-    renderImage(e.target.id);
-  });
-}
-
-function renderImage(imageNum) {
-  let imageHTMl = ``;
-
-  for (const indicator of indicators) {
-    if (imageNum === indicator.id) {
-      indicator.classList.add("active");
-    } else {
-      indicator.classList.remove("active");
-    }
-  }
-
-  showcaseImageContainer.innerHTML = `<img src="assets/portfolio${imageNum}.png" alt="" />`;
-}
-
-// showcase part
-
 // certificates part
 const persons = document.querySelectorAll(".courses__picture");
 const personName = document.querySelector(".certificates__bio__name");
