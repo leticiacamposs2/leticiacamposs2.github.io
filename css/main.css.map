@@ -11,7 +11,7 @@
         "components/_sidedrawer.scss",
         "components/_jumbotron.scss",
         "components/_about.scss",
-        "components/_showcase.scss",
+        "components/_card.scss",
         "components/_certificates.scss"
     ],
     "names": [],
